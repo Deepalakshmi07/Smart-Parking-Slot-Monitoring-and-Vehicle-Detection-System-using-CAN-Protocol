@@ -35,30 +35,30 @@
           | Servo Gate  |
           +-------------+
 
-Node 2: Detects vehicle entry and exit.
+- Node 2: Detects vehicle entry and exit.
 
-Node 1: Monitors parking slots and displays information.
+- Node 1: Monitors parking slots and displays information.
 
-Node 3: Controls the entry/exit gate using a servo.
+- Node 3: Controls the entry/exit gate using a servo.
 
 # Components
 
-LPC2129 Microcontrollers – Used for all three nodes.
-IR Sensors × 2 – Detect vehicle entry and exit.
-16×4 LCD – Displays parking status and time.
-RTC Module – Provides real-time hours, minutes and seconds.
-Servo Motor – Controls the parking gate.
-CAN Interface – Provides communication between the nodes.
-Power Supply – Provides required power to the system.
+- LPC2129 Microcontrollers – Used for all three nodes.
+- IR Sensors × 2 – Detect vehicle entry and exit.
+- 16×4 LCD – Displays parking status and time.
+- RTC Module – Provides real-time hours, minutes and seconds.
+- Servo Motor – Controls the parking gate.
+- CAN Interface – Provides communication between the nodes.
+- Power Supply – Provides required power to the system.
 
 # Technologies and Protocols
 
-Embedded C	- Programming the microcontrollers
-CAN	Communication - between Node 2, Node 1 and Node 3
-I²C	Communication - between Node 1 and RTC
-PWM	- Servo motor control
-GPIO -	IR sensor interfacing
-LCD - Interface	Parking status display
+- Embedded C - Programming the microcontrollers
+- CAN Communication - between Node 2, Node 1 and Node 3
+- I²C Communication - between Node 1 and RTC
+- PWM - Servo motor control
+- GPIO - IR sensor interfacing
+- LCD - Interface	Parking status display
  
 # Project Overview
 
@@ -68,7 +68,7 @@ LCD - Interface	Parking status display
 
 - Node 1 receives the message and checks the parking availability. If a slot is available, it increases the occupied slot count and calculates the free slots.
 
-Free Slots = 6 - Occupied Slots
+- Free Slots = 6 - Occupied Slots
 
 - Node 1 also reads the current time from the RTC through I²C and displays the parking information on the LCD.
 
